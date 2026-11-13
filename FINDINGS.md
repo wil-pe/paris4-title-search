@@ -294,10 +294,12 @@ validation, no overlap with training data); they are cheap filters to apply firs
 `ink9.py` follows the official inference code (ScrollPrize/villa, branch `merge-ink-pipelines`):
 level 2 of a 2.4 µm surface volume, the 84 central layers averaged by 4 into 21 layers at
 9.6 µm, 128 × 128 windows with stride 64, robust normalisation per window, Hann blending. The
-official script runs on CUDA or falls back to CPU, on a surface volume pooled beforehand;
-`ink9.py` adds the Apple GPU (PyTorch MPS), works on a window given in millimetres and read
-straight from the bucket, processes it tile by tile with resume, and loads the checkpoints with
-`weights_only=True`.
+script of that branch runs on CUDA or falls back to CPU. Correction (13 Nov 2026): the current
+official inference in `main` (`vesuvius.ink_detection.inference.infer`) already runs on Apple
+GPUs (PR #1865, merged 8 Oct 2026; `--device` option in PR #2160), so MPS support is not something
+this repository adds. What `ink9.py` adds is practical: a window given in millimetres and read
+straight from the bucket, tile-by-tile processing with resume, checkpoints loaded with
+`weights_only=True`, and passes at several depth offsets for the stability test of section 6.
 
 What the model card (<https://huggingface.co/scrollprize/ink_9um>, read on 13 November 2026)
 says and that matters here: the model was trained on four scrolls, PHerc. 139, Scroll 1667,
@@ -360,7 +362,25 @@ offsets) shows nothing legible: 0.9–3.9 % of pixels above 0.5 **[log]**, agree
 checkpoints 0.21–0.51 **[notes]**, against 0.96 on real text. The other twelve checkpoints of
 `ink_9um` were not tried at the time of writing.
 
-## 10. Other things that did not work
+## 10. Blind automatic reading in the book viewer (experimental)
+
+`lecture_livre.py` gives each page of the book viewer to a language model as smoothed strips with
+millimetre rulers; the model returns a line-by-line reading (capital = sure, lower case =
+uncertain, dot = illegible) without access to any edition. Measured on two columns that are
+already published (`lecture_livre.py noter`, file `lectures/temoins.json`, not distributed):
+
+| Control column | Letters of the edition recovered | "Sure" letters that are right | "Uncertain" letters that are right |
+|---|---|---|---|
+| col. −8 (241 letters) | 50 % | 75 % (65 letters) | 56 % (128 letters) |
+| col. −6 (268 letters) | 56 % | 92 % (75 letters) | 63 % (127 letters) |
+
+On pages without an edition the run (44 pages read out of 138 before it was stopped) gave
+isolated letters and three sure word sequences, nothing that can be translated. Those readings are
+kept out of this repository on purpose (see "Data terms"). Two control columns are a small
+sample, and the reader may know the published text from elsewhere; the figures are an upper
+bound, not a validation.
+
+## 11. Other things that did not work
 
 All **[notes]** unless stated; the scripts are included.
 

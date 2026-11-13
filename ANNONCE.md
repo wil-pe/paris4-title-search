@@ -64,8 +64,9 @@ Source: <https://scrollprize.org/prizes>, section "Progress Prizes", and the lin
   of reading, what it enables that was not possible before, what evidence), and agreement to the
   terms.
 
-Given the sentence quoted above, the application leads with what is a reusable tool (`ink_9um`
-on an Apple GPU with safe loading of the weights, the three controls that apply to any candidate,
+Given the sentence quoted above, the application leads with what is a reusable tool (the three controls that apply to any candidate,
+`ink_9um` on a millimetre window read from the bucket with safe loading of the weights; Apple GPU
+support is already upstream and is not claimed,
 the viewers for checking by eye, the before/after on real data), not with the negative result.
 
 The title prize has its own rule: a title discovery must not be made public before the official
@@ -105,9 +106,9 @@ announcement. We found no title, so nothing in this repository is concerned.
 > First Letters scrolls only PHerc. 800 has published segments.
 >
 > **(3) What was not possible before.** To our knowledge: running the Paris 4 3D model without
-> a CUDA machine (the official inference code calls `.cuda()`); running `ink_9um` on an Apple
-> GPU, on a window given in millimetres and read straight from the bucket (the official script
-> runs on CUDA or CPU, on a surface volume pooled beforehand); an `ink_9um` map of the whole
+> a CUDA machine (the official inference code calls `.cuda()`); running `ink_9um` on a window
+> given in millimetres and read straight from the bucket, with repeated depth-offset passes
+> (Apple GPU support itself already exists upstream: PR #1865 in ScrollPrize/villa); an `ink_9um` map of the whole
 > blank end of Scroll 1 (282 cm²) and a 3D-model map of part of it on the 1.129 µm scan
 > (35 cm²); a measured sensitivity for a
 > title search (the 3D model keeps 32–40 % of a real line once its ink is weakened to 40 %

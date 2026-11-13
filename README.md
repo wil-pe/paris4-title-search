@@ -7,9 +7,15 @@ repository offers instead:
 - **Laptop inference for two official ink models.** `scripts/ink9.py` runs the multi-scroll
   model `scrollprize/ink_9um`, and `scripts/balayage.py` runs the Paris 4 3D model
   `scrollprize/ink_paris4_3d_4.8um_gambiarra`, on an Apple-silicon GPU (PyTorch MPS) or on CPU.
-  Both read only the chunks they need from the public bucket. For the 3D model the official
-  inference code calls `.cuda()`; for `ink_9um` the official script already falls back to CPU,
-  and `ink9.py` adds the Apple GPU and a window given in millimetres.
+  Both read only the chunks they need from the public bucket. Correction (13 Nov 2026): Apple
+  GPU support for `ink_9um` is **not** a novelty of this repository. The official inference in
+  `ScrollPrize/villa` `main` (`python -m vesuvius.ink_detection.inference.infer`) already picks
+  MPS automatically (PR #1865, 8 Oct 2026) and has a `--device` option (PR #2160); `ink9.py` was
+  written against the older, frozen `merge-ink-pipelines` branch, which only knew CUDA and CPU.
+  What `ink9.py` still adds is convenience: a window given in millimetres and read straight from
+  the bucket, tile-by-tile processing with resume, checkpoints loaded with `weights_only=True`,
+  and repeated passes at several depth offsets for the stability test. For the 3D model, the
+  inference code of the branch we used calls `.cuda()`.
 - **Three controls every title candidate should pass** before anyone gets excited: the
   facing-wrap test (ghosts), the fold test, and the stability test. Each one is a script.
 - **A measured negative result** on the blank papyrus after the last column, with the
@@ -244,7 +250,21 @@ the DCLP by vocabulary similarity with it.
 ### Viewers
 
 ![The book viewer](figures/13_book_viewer.jpg)
-*`visionneuse_livre.py`: the unrolled scroll column by column, with millimetre rulers; for the sixteen published columns, the published Greek text (DCLP record) is shown next to the image.*
+*`visionneuse_livre.py`, here on a column that is already published (col. −8 of the edition): the unrolled scroll one column per page, millimetre rulers, detected line positions, the published Greek text (DCLP record) and a French working translation of it next to the image.*
+
+The book viewer covers the whole unrolled scroll (160 pages; the columns of the last 2.5 m are
+detected from the ink maps, earlier pages follow a regular cut that is not aligned on the real
+columns). Arrow keys turn the pages, keys 1–5 switch between ink maps, and a screenshot always
+carries the page, the column and the cursor position in millimetres.
+
+It also has an experimental **blind automatic reading**: `lecture_livre.py` cuts each page into
+smoothed strips with rulers, a language model reads them line by line without seeing any edition,
+and the viewer shows the result with a confidence colour per line. On two control columns that
+are already published, read in exactly that way, 50 % and 56 % of the letters of the edition were
+recovered, and 75 % and 92 % of the letters the reader marked as sure were right
+(`lecture_livre.py noter`). On unpublished pages it gives isolated letters and a few words, not
+text. Those readings are **not** in this repository: they would be transcriptions of unpublished
+parts of the scroll, which the data terms reserve until 25 June 2027 (see below).
 
 ![What a title would look like](figures/03_title_example_in_blank.jpg)
 *A reference built for checking by eye: the PHerc. 139 title pasted into blank papyrus of Paris 4 at 100, 50 and 25 % strength (a montage, labelled as such).*
