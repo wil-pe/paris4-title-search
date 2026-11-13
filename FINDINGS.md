@@ -36,6 +36,12 @@ The negative result on the title is not new: see "Prior work" at the end.
 
 ## 1. The negative result on the title zone
 
+![Figure 1. The expected title zone seen by seven techniques, each with real text as a reference.](figures/01_title_zone_seven_views.jpg)
+*Figure 1. The expected title zone seen by seven techniques, each with real text as a reference.*
+
+![Figure 2. The Paris 4 3D model run on the 1.129 µm scan over the central band of the blank zone.](figures/02_scan1129_sweep.jpg)
+*Figure 2. The Paris 4 3D model run on the 1.129 µm scan over the central band of the blank zone.*
+
 The last column of text spans x ≈ 217–280 mm (six lines in the edition, with a paragraphos
 below); to its right the mesh continues for about 128 mm of blank papyrus, up to x = 408 mm near
 the core. The blank zone covered by the mesh is 293 cm², of which 44 cm² faces text of the
@@ -96,6 +102,9 @@ being looked for: the PHerc. 139 title as `ink_9um` sees it, pasted into blank P
 
 ## 2. Sensitivity: what would have been seen, and what would not
 
+![Figure 3. A known title pasted into blank papyrus at 100, 50 and 25 % strength (montage).](figures/03_title_example_in_blank.jpg)
+*Figure 3. A known title pasted into blank papyrus at 100, 50 and 25 % strength (montage).*
+
 **Weakened real ink.** On a real line of Paris 4 (y ≈ 72 mm, x 176–195 mm) the excess density of
 the ink was multiplied by a factor α in the raw scan and the Paris 4 3D model was run again
 (`balayage.py etalon`, assembled by `assembler_etalon.py`). Share of the originally detected ink
@@ -152,6 +161,12 @@ That is why families 2 and 5, which do read the PHerc. 139 title, matter more.
 
 ## 3. Two ghosts, read and matched to the edition
 
+![Figure 4. The mark under the last column: in the outer depth slice it is the end of a published line.](figures/04_ghost_poi.jpg)
+*Figure 4. The mark under the last column: in the outer depth slice it is the end of a published line.*
+
+![Figure 5. A row of marks after the last column, and the predicted ghost of the facing wrap at the same place.](figures/05_ghost_emphai.jpg)
+*Figure 5. A row of marks after the last column, and the predicted ghost of the facing wrap at the same place.*
+
 In this compressed scroll adjacent wraps are about 0.1 mm apart. In a thick projection the ink
 of the next wrap outward appears on top of the sheet. Along the mesh normal, with 9.6 µm voxels,
 the ink of the sheet itself sits at t = −4…+3 and the ghosts at t ≥ +4, where t > 0 points
@@ -174,6 +189,9 @@ composed interactively from the outputs of `carte_fin_paris4.py`, `voisinage.py`
 `carte_sans_fantomes.py` and `ink9.py`; the layout code was not saved as a script.
 
 ## 4. Vertical alignments are folds
+
+![Figure 6. Marks spotted by eye (red) and the folds of the flattened roll computed from the mesh (blue).](figures/06_folds_vs_marks.jpg)
+*Figure 6. Marks spotted by eye (red) and the folds of the flattened roll computed from the mesh (blue).*
 
 The scroll is flattened: in cross-section it is an elongated loop of about 12 × 4 mm
 **[notes]**, so the sheet is folded tightly twice per turn and
@@ -199,6 +217,15 @@ fold is a crack and not every crack is on a fold; the test only removes "it is v
 aligned" as an argument for writing.
 
 ## 5. Winding direction and written side
+
+![Figure 7. The real spiral of the sheet at mid-height, and its distance to the centre along the roll.](figures/07_winding_direction.png)
+*Figure 7. The real spiral of the sheet at mid-height, and its distance to the centre along the roll.*
+
+![Figure 8. The sheet seen edge-on, with and without ink: the ink deposit is on the side facing the centre.](figures/08_sheet_profile_ink_side.png)
+*Figure 8. The sheet seen edge-on, with and without ink: the ink deposit is on the side facing the centre.*
+
+![Figure 14. The four ways of rolling a scroll and where a title ends up (labels in French); the green frame is the case measured here.](figures/14_four_windings.png)
+*Figure 14. The four ways of rolling a scroll and where a title ends up (labels in French); the green frame is the case measured here.*
 
 `sens_enroulement.py` follows a mesh row in reading order and measures the distance to the
 scroll axis **[recomputed, three heights y = 42, 84, 126 mm]**:
@@ -226,6 +253,9 @@ As a per-pixel ink detector the relief is useless at this resolution: AUC 0.53 a
 **[notes]**; it was not redone at native resolution.
 
 ## 6. Three tests for any candidate
+
+![Figure 9. Stability map: what remains when only pixels marked in all six passes are kept.](figures/09_stability_map.jpg)
+*Figure 9. Stability map: what remains when only pixels marked in all six passes are kept.*
 
 Before a mark in a blank zone is called writing:
 
@@ -255,6 +285,12 @@ validation, no overlap with training data); they are cheap filters to apply firs
 
 ## 7. `ink_9um` on a MacBook
 
+![Figure 10. The PHerc. 139 title: raw scan, published map, our run.](figures/10_pherc139_title_ink9.jpg)
+*Figure 10. The PHerc. 139 title: raw scan, published map, our run.*
+
+![Figure 11. Known text of Paris 4 read by `ink_9um` at three depth offsets.](figures/11_paris4_text_ink9.jpg)
+*Figure 11. Known text of Paris 4 read by `ink_9um` at three depth offsets.*
+
 `ink9.py` follows the official inference code (ScrollPrize/villa, branch `merge-ink-pipelines`):
 level 2 of a 2.4 µm surface volume, the 84 central layers averaged by 4 into 21 layers at
 9.6 µm, 128 × 128 windows with stride 64, robust normalisation per window, Hann blending. The
@@ -283,6 +319,9 @@ port, possibly on training regions, not held-out validation.**
   of it download **[log]**.
 
 ## 8. Before and after on segment w126-127
+
+![Figure 12. Published 2D map (top) and `ink_9um` on the laptop (bottom) at the same place.](figures/12_w126_before_after.jpg)
+*Figure 12. Published 2D map (top) and `ink_9um` on the laptop (bottom) at the same place.*
 
 In the "book" viewer (`visionneuse_livre.py`) two lines of letters were spotted by eye near the
 outer end of the scroll. Located through the 3D geometry: segment `20260701183150-w126-127`,
@@ -388,6 +427,16 @@ stability tests, the 1.129 µm sweep with the 3D model, and `ink_9um` over the w
 Scans, segments, meshes and published ink predictions: *Vesuvius Challenge - CT Scans of
 Herculaneum Papyri* (Angelotti, Parsons, Johnson, Dal Prà, Rudolph, Tafforeau, Mirone,
 Henderson, Schilling, McDonald, Josey, Nader, Parker, Seales), Vesuvius Challenge, CC BY-NC 4.0.
+
+## Data terms
+
+The [data page of PHerc. Paris. 4](https://scrollprize.org/data_browser/PHercParis4) carries a
+publication notice: until 25 June 2027, users "may not publish scholarly claims, transcriptions,
+translations, editions, interpretations, or formal analyses based on the data" without permission.
+This document is a technical report on ink-detection tooling. It gives no transcription or
+translation of unpublished parts of the scroll; section 8 describes letters without reading them.
+The Greek quoted is the published text of the last sixteen columns, and the two ghosts of section 3
+are letters of those published lines.
 
 ## Sources of the Greek text
 

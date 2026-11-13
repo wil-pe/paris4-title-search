@@ -20,6 +20,20 @@ repository offers instead:
 Everything that is claimed is in [FINDINGS.md](FINDINGS.md), with the script and the figure
 behind each number, and a list of what was not verified.
 
+## At a glance
+
+![The expected title zone seen by seven techniques](figures/01_title_zone_seven_views.jpg)
+*The blank papyrus after the last column (x 285–345 mm, y 48–106 mm of the end segment) seen by seven techniques. Under each panel: real text of the scroll seen by the same technique, at the same scale. None of them shows a title.*
+
+![The PHerc. 139 title computed on a laptop](figures/10_pherc139_title_ink9.jpg)
+*The known end title of PHerc. 139: raw scan, the published ink map, and `ink_9um` run on an Apple-silicon laptop with `scripts/ink9.py`.*
+
+![Vertical marks follow the folds of the flattened roll](figures/06_folds_vs_marks.jpg)
+*Vertically aligned "marks" in the ink maps (red boxes, spotted by eye) fall on the folds of the flattened roll (blue dots, computed from the mesh curvature).*
+
+![Before and after on an outer wrap](figures/12_w126_before_after.jpg)
+*An outer wrap of Paris 4 (segment w126-127): the published 2D map, and `ink_9um` on the laptop.*
+
 Prior work: the same conclusion (no legible title, and "letters" in the blank zone that are echoes
 of line ends one wrap away) was reported two months earlier in the Discord thread *"PHerc. Paris 4:
 complete recto/verso maps and a thirteen-depth atlas of the title region"* (11 September 2026),
@@ -229,6 +243,12 @@ the DCLP by vocabulary similarity with it.
 
 ### Viewers
 
+![The book viewer](figures/13_book_viewer.jpg)
+*`visionneuse_livre.py`: the unrolled scroll column by column, with millimetre rulers; for the sixteen published columns, the published Greek text (DCLP record) is shown next to the image.*
+
+![What a title would look like](figures/03_title_example_in_blank.jpg)
+*A reference built for checking by eye: the PHerc. 139 title pasted into blank papyrus of Paris 4 at 100, 50 and 25 % strength (a montage, labelled as such).*
+
 ```bash
 .venv/bin/python -I scripts/visionneuse_pages.py
 ```
@@ -254,7 +274,7 @@ known word, and averaging of sub-threshold scores), kept because FINDINGS.md quo
 
 ## What is not in the repository
 
-No scan data, no model weights and no official code are redistributed. The twelve small figures
+No scan data, no model weights and no official code are redistributed. The fourteen small figures
 in `figures/` are derived from Vesuvius Challenge data and carry the attribution below.
 
 ## Licence and attribution
@@ -270,6 +290,13 @@ in `figures/` are derived from Vesuvius Challenge data and carry the attribution
   Vesuvius Challenge.
 - **Models and model code**: `scrollprize/ink_paris4_3d_4.8um_gambiarra` (MIT) and
   `scrollprize/ink_9um` (MIT), run with the code of <https://github.com/ScrollPrize/villa> (MIT).
+- **Data terms for PHerc. Paris. 4**: the [data page](https://scrollprize.org/data_browser/PHercParis4)
+  reserves scholarly publication (claims, transcriptions, translations, editions, interpretations)
+  based on these data until 25 June 2027. This repository contains none for unpublished parts of
+  the scroll: the Greek quoted here is the already published text of the last sixteen columns,
+  and the two "ghost" readings are letters of those published lines. The book viewer embeds a
+  French working translation of those sixteen published columns, made from the published record
+  and reviewed by no specialist; it is a reading aid, not an edition.
 - **Greek text**: record 989336 of the Digital Corpus of Literary Papyri
   (<https://github.com/papyri/idp.data>, © DCLP and LDAB, CC BY 3.0). The record refers to
   F. Nicolardi, S. Parsons, D. Delattre, G. Del Mastro, R. L. Fowler, R. Janko, T. Reinhardt,
