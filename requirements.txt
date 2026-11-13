@@ -1,0 +1,16 @@
+# Python 3.12 (tested with 3.12.9 on macOS 27, Apple M4 Pro). Versions are the ones of the working environment.
+# Imported directly by the scripts in scripts/:
+numpy==2.5.4
+scipy==1.18.1
+torch==2.15.0
+pillow==13.0.0
+tifffile==2026.11.8
+imagecodecs==2026.11.11      # needed by tifffile to decode the compressed TIFFs of the bucket
+numcodecs==0.17.1            # Zarr chunk decompression in scripts/volume.py
+
+# Imported by the official model code (ScrollPrize/villa) that ink9.py and modele_encre.py load:
+zarr==3.4.2
+tqdm==4.70.1
+PyYAML==6.0.3
+fsspec==2026.9.0
+safetensors==0.8.0

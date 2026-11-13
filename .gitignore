@@ -1,0 +1,12 @@
+# données, modèles et code officiel : jamais dans le dépôt
+/data/
+/modeles/
+/externe/
+/apercus/
+/.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# notes personnelles de mise en ligne : à ne pas publier
+/A_FAIRE_*.md

@@ -1,0 +1,46 @@
+sample_id,nom,type,statut,prix_ouverts,detail,source
+PHercParis4,PHerc. Paris 4 (Scroll 1),rouleau,dechiffre,Titre,"~5 % lu en 2023-24 (Grand Prix 2023) ; ~140 colonnes déroulées sur le rescan 2,4 µm (juil. 2026). Titre et auteur toujours inconnus.",https://scrollprize.org/grandprize ; https://scrollprize.substack.com/p/a-new-1m-grand-prize-for-2027
+PHerc0172,PHerc. 172 (Scroll 5),rouleau,dechiffre,,"Titre lu (mai 2025) : Philodème, Sur les vices, livre 1(?). ~70 % de la zone encrée déroulée (janv. 2026), lecture inégale.",https://scrollprize.substack.com/p/60000-first-title-prize-awarded ; https://scrollprize.substack.com/p/70-of-pherc-172-is-now-digitally
+PHerc1667,PHerc. 1667 (Scroll 4),rouleau,dechiffre,,"Entièrement déroulé et lu (juin 2026) : bas de ~22 colonnes, traité d'éthique stoïcien citant Aristocréon. Titre non indiqué.",https://scrollprize.org/firstscroll
+PHerc0139,PHerc. 139,rouleau,dechiffre,,"Titre et auteur lus (juin 2026) : Philodème, Sur les dieux, livre 8. Corps du texte non rapporté.",https://scrollprize.org/firstscroll
+PHerc0343,PHerc. 343,rouleau,dechiffre,,"Premières lettres (oct. 2026, 50 k$) : πᾶν τὸ γινόμε[νον]. Le reste est à lire.",https://scrollprize.substack.com/p/50k-first-letters-prize-awarded-for
+PHerc0306B,PHerc. 306B,rouleau,dechiffre,,"Premières lettres (nov. 2026, 50 k$) : τὸ δι᾽ αὑτὸ αἱρετόν (lecture plausible). Le reste est à lire.",https://scrollprize.substack.com/p/writing-seen-in-pherc-306b-for-the
+PHerc1447,PHerc. 1447,rouleau,dechiffre,GP,"Premières lettres signalées (détail non publié dans les pages lues). Reste éligible au Grand Prix.",https://scrollprize.substack.com/p/writing-seen-in-pherc-306b-for-the ; https://scrollprize.org/prizes
+PHerc0814,PHerc. 814,rouleau,indices,,"Formes de lettres faibles dans les prédictions (oct. 2025), aucune lecture validée.",https://scrollprize.substack.com/p/multiple-scrolls-now-show-greek-letters
+PHerc0841,PHerc. 841,rouleau,indices,,"Quelques lettres grecques visibles sur un rendu de travail (oct. 2025), aucune lecture validée.",https://scrollprize.substack.com/p/multiple-scrolls-now-show-greek-letters
+PHerc0125,PHerc. 125,rouleau,non_dechiffre,GP+FL,Rien de lu.,https://scrollprize.org/prizes
+PHerc0191,PHerc. 191,rouleau,non_dechiffre,GP+FL,Rien de lu.,https://scrollprize.org/prizes
+PHerc0211,PHerc. 211,rouleau,non_dechiffre,GP+FL,Rien de lu. Une longueur notable a été « spiralisée » (sept. 2026).,https://scrollprize.org/prizes ; https://scrollprize.org/winners
+PHerc0257,PHerc. 257,rouleau,non_dechiffre,GP+FL,Rien de lu.,https://scrollprize.org/prizes
+PHerc0268,PHerc. 268,rouleau,non_dechiffre,GP+FL,Rien de lu.,https://scrollprize.org/prizes
+PHerc0358,PHerc. 358,rouleau,non_dechiffre,GP+FL,Rien de lu.,https://scrollprize.org/prizes
+PHerc0800,PHerc. 800,rouleau,non_dechiffre,GP+FL,Rien de lu.,https://scrollprize.org/prizes
+PHerc0813,PHerc. 813,rouleau,non_dechiffre,GP+FL,Rien de lu.,https://scrollprize.org/prizes
+PHerc0826,PHerc. 826,rouleau,non_dechiffre,GP+FL,"Rien de lu. Tentative First Letters documentée de bout en bout (août 2026), sans lettres.",https://scrollprize.org/prizes ; https://scrollprize.org/winners
+PHerc1203,PHerc. 1203,rouleau,non_dechiffre,GP+FL,Rien de lu.,https://scrollprize.org/prizes
+PHerc1218,PHerc. 1218,rouleau,non_dechiffre,GP+FL,Rien de lu.,https://scrollprize.org/prizes
+PHerc1545,PHerc. 1545,rouleau,non_dechiffre,GP+FL,Rien de lu.,https://scrollprize.org/prizes
+PHerc0175A,PHerc. 175A,rouleau,non_dechiffre,FL,Rien de lu.,https://scrollprize.org/prizes
+PHerc0175B,PHerc. 175B,rouleau,non_dechiffre,FL,Rien de lu.,https://scrollprize.org/prizes
+PHerc0483A,PHerc. 483A,rouleau,non_dechiffre,FL,Rien de lu.,https://scrollprize.org/prizes
+PHerc0483B,PHerc. 483B,rouleau,non_dechiffre,FL,Rien de lu.,https://scrollprize.org/prizes
+PHerc0490A,PHerc. 490A,rouleau,non_dechiffre,FL,Rien de lu.,https://scrollprize.org/prizes
+PHerc0490B,PHerc. 490B,rouleau,non_dechiffre,FL,Rien de lu.,https://scrollprize.org/prizes
+PHerc0846A,PHerc. 846A,rouleau,non_dechiffre,FL,Rien de lu.,https://scrollprize.org/prizes
+PHerc0846B,PHerc. 846B,rouleau,non_dechiffre,FL,Rien de lu.,https://scrollprize.org/prizes
+PHercParis3,PHerc. Paris 3 (Scroll 2),rouleau,non_dechiffre,,"Encre non lisible en juil. 2025 ; aucune lecture annoncée depuis. Hors liste des prix (raison non précisée).",https://scrollprize.substack.com/p/summer-haze-comes-with-ink
+PHerc0332,PHerc. 332 (Scroll 3),rouleau,non_dechiffre,,"Encre non lisible en juil. 2025 ; aucune lecture annoncée depuis. Hors liste des prix (raison non précisée).",https://scrollprize.substack.com/p/summer-haze-comes-with-ink
+PHerc1299,PHerc. 1299,rouleau,non_dechiffre,,Aucune mention de lecture trouvée. Hors liste des prix (raison non précisée).,
+PHerc1451,PHerc. 1451,rouleau,non_dechiffre,,Aucune mention de lecture trouvée. Hors liste des prix (raison non précisée).,
+PHercMAN5,PHerc. MAN 5,rouleau,non_dechiffre,,Aucune mention de lecture trouvée. Hors liste des prix (raison non précisée).,
+PHercMANB,PHerc. MAN B,rouleau,non_dechiffre,,Aucune mention de lecture trouvée. Hors liste des prix (raison non précisée).,
+PHerc0009B,PHerc. 9B,fragment,fragment,,Fragment détaché (19 segments publiés).,
+PHerc0343P,PHerc. 343P,fragment,fragment,,"Fragment du rouleau 343 ; encre détectée (juil. 2025).",https://scrollprize.substack.com/p/summer-haze-comes-with-ink
+PHerc0500P2,PHerc. 500P2,fragment,fragment,,"Fragment (46 segments publiés), scanné jusqu'à 0,55 µm.",
+PHercMANBp,PHerc. MAN B (fragment),fragment,fragment,,Fragment (11 segments publiés).,
+PHerc1667Cr1Fr3,PHerc. 1667 Cr 1 Fr 3 (Frag5),fragment,fragment,,"Fragment du rouleau 1667, ouvert en 1987 (méthode d'Oslo). Jeu EduceLab historique.",https://dl.ash2txt.org/fragments/Frag5/PHerc1667Cr1Fr3.volpkg/
+PHerc51Cr4Fr8,PHerc. 51 Cr 4 Fr 8 (Frag6),fragment,fragment,,Jeu EduceLab historique.,https://dl.ash2txt.org/fragments/Frag6/PHerc51Cr4Fr8.volpkg/
+PHercParis1Fr34,PHerc. Paris 1 Fr 34 (Frag3),fragment,fragment,,Jeu EduceLab historique.,https://dl.ash2txt.org/fragments/Frag3/PHercParis1Fr34.volpkg/
+PHercParis1Fr39,PHerc. Paris 1 Fr 39 (Frag4),fragment,fragment,,"Jeu EduceLab historique ; ancien jeu de test caché du concours Kaggle.",https://dl.ash2txt.org/fragments/Frag4/PHercParis1Fr39.volpkg/
+PHercParis2Fr143,PHerc. Paris 2 Fr 143 (Frag2),fragment,fragment,,Jeu EduceLab historique.,https://dl.ash2txt.org/fragments/Frag2/PHercParis2Fr143.volpkg/
+PHercParis2Fr47,PHerc. Paris 2 Fr 47 (Frag1),fragment,fragment,,Jeu EduceLab historique.,https://dl.ash2txt.org/fragments/Frag1/PHercParis2Fr47.volpkg/
